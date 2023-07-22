@@ -1,6 +1,24 @@
-<?php 
+<?php
+session_start();
+$id_usuario = isset($_SESSION[$id_usuario]) ? $_SESSION[$id_usuario] : "";
 include_once "header.php";
 ?>
+
+<div class="row mt-5 d-flex justify-content-center">
+    <h1 class="bg-dark py-1 text-center text-white">Resumen de compra</h1>
+    <div class="col-10">
+        <table class="table" id="tableUsuario">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody id="tableBodyUsuario"></tbody>
+        </table>
+    </div>
+</div>
 
 
 <div class="row my-5">
@@ -14,25 +32,10 @@ include_once "header.php";
 
     <div class="col-4">
         <div class="form-floating">
-            <input type="date" name="txtFecha" id="txtFecha" class="form-control" placeholder=".">
+            <input type="date" name="txtFechaP" id="txtFechaP" class="form-control" placeholder=".">
             <label for="floatingInput">Fecha del pedido</label>
         </div>
     </div>
-
-    <div class="col-2">
-        <span class="fw-bolder">Nombre:</spam>
-    </div>
-
-    <div class="col-4">
-        <div class="form-floating">
-            <input type="text" name="txtNombre" id="txtNombre" class="form-control" placeholder=".">
-            <label for="floatingInput">Nombre</label>
-        </div>
-    </div>
-</div>
-
-<div class="row mt-3">
-
     <div class="col-2">
         <span class="fw-bolder">Direccion:</spam>
     </div>
@@ -42,6 +45,10 @@ include_once "header.php";
             <label for="floatingInput">Direccion</label>
         </div>
     </div>
+
+</div>
+
+<div class="row mt-3">
 
     <div class="col-2">
         <span class="fw-bolder">Telefono:</spam>
@@ -53,10 +60,6 @@ include_once "header.php";
         </div>
     </div>
 
-</div>
-
-
-<div class="row mt-3">
     <div class="col-2">
         <span class="fw-bolder">Fecha De Envio</spam>
     </div>
@@ -66,6 +69,12 @@ include_once "header.php";
             <label for="floatingInput">Fecha De Envio</label>
         </div>
     </div>
+
+
+</div>
+
+
+<div class="row mt-3">
 
     <div class="col-2">
         <span class="fw-bolder">Forma de pago:</spam>
@@ -81,27 +90,41 @@ include_once "header.php";
             <label for="floatingInput">Forma de pago</label>
         </div>
     </div>
-</div>
-
-<div class="row mt-3">
-    <div class="col-2">
-        <span class="fw-bolder">Total del Pedido</spam>
-    </div>
-    <div class="col-4">
-        <div class="form-floating">
-            <input type="text" name="txtTotalPedido" id="txtTotalPedido" class="form-control" placeholder="." readonly>
-        </div>
-    </div>
-
     <div class="col-2">
         <span class="fw-bolder">Estado del pedido:</spam>
     </div>
     <div class="col-4">
         <div class="form-floating">
-            <input type="text" name="txtEstadoPedido" id="txtEstadoPedido" class="form-control" placeholder="." readonly>
+            <input type="text" name="txtEstadoPedido" id="txtEstadoPedido" class="form-control" placeholder=".">
         </div>
     </div>
 </div>
+<div class="row mt-3">
+
+    <div class="col-2">
+        <span class="fw-bolder">Codigo del pedido:</spam>
+    </div>
+    <div class="col-4">
+        <div class="form-floating">
+            <input type="text" name="txtCodigoPe" id="txtCodigoPe" class="form-control" placeholder=".">
+        </div>
+    </div>
+
+    <div class="col-2">
+        <span class="fw-bolder">Usuario:</spam>
+    </div>
+    <div class="col-4">
+        <div class="form-floating">
+            <input type="text" name="" id="" class="form-control" placeholder="" value="?php echo $id_usuario; ?>">
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+
+    <a onclick="createProduct()" class="btn btn-danger mt-4 ">Confirmar Compra</a>
+</div>
+<script src="./assets/js/compra.js"></script>
 <!-- 
 <div class="row mt-3">
     <div class="col-2">

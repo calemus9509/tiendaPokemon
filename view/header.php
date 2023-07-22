@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col-1 d-flex align-items-center justify-content-end">
-                <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #FFFF00;"></i>
+                <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #FF0000;"></i>
             </div>
             <div class="col-4 flex-column my-2 me-5">
 
@@ -40,35 +40,33 @@
             </div>
             <div class="col-3 d-flex justify-content-around">
 
-                <button type="button" class="btn btn-warning position-relative" ondrop="drop(event)" ondragover="allowDrop(event)" id="btnCar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <button type="button" class="btn btn-danger position-relative" ondrop="drop(event)" ondragover="allowDrop(event)" id="btnCar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="fa-solid fa-cart-shopping fa-lg"></i>
 
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cantidadItems">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning" id="cantidadItems">
                         0
                         <span class="visually-hidden">unread messages</span>
                     </span>
                 </button>
 
-                <button  type="button" class="btn btn-warning"  onclick="window.location.href = 'login.php';">Iniciar sesión</button>
-                <button  onclick="deleteLogin()" type="button" class="btn btn-warning"><i class="fa-solid fa-right-from-bracket"></i></button>
+                <button type="button" class="btn btn-danger" onclick="window.location.href = 'login.php';">Iniciar sesión</button>
+                <button onclick="deleteLogin()" type="button" class="btn btn-danger"><i class="fa-solid fa-right-from-bracket"></i></button>
 
-</div>
-
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="margin-top: 60px;">
-                    <div class="offcanvas-header">
-                        <h5 id="offcanvasRightLabel">Lista de compras</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body" id="listcarpokemon">
-
-                    </div>
-                    <div class="offcanvas-footer text-center">
-                        <span id="totalPagar">Total: </span>
-                        <hr>
-                        <a href="pedido.frm.php" class="btn btn-sm btn-warning mb-1">Finalizar compra</a>
-                    </div>
-                </div>
             </div>
 
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="margin-top: 60px;">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Lista de compras</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="listcarpokemon">
 
+                </div>
+                <div class="offcanvas-footer text-center">
+                    <span id="totalPagar">Total: </span>
+                    <hr>
+                    <a href="pedido.frm.php" class="btn btn-sm btn-danger mb-1">Finalizar compra</a>
+                </div>
+            </div>
         </div>
+    </div>

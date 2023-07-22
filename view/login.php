@@ -10,7 +10,7 @@
     <script src="./assets/Js/axios.min.js"></script>
 </head>
 
-<body>
+<body onload="selectRol()">
     <div class="container-fluid">
         <h1 class="text-center  mt-5 mb-5">Inicio de sesion</h1>
         <div class="row">
@@ -25,6 +25,7 @@
 
         <div class="row mt-3">
             <input onclick="login()" class="btn btn-primary" type="button" value="Iniciar">
+            <a href="registros.php" class="btn btn-danger mt-4">Registrarse</a>
 
         </div>
 </body>

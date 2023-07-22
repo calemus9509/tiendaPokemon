@@ -13,10 +13,13 @@ $response = $usuarioM->login();
 
 
 
-if(isset($response) AND !empty($response)){
+if (isset($response) and !empty($response)) {
     session_start();
-$_SESSION["nombre"] = $response[0]["nombre"];
-$_SESSION["correo"] = $response[0]["correo"];
+    $_SESSION["nombre"] = $response[0]["nombre"];
+    $_SESSION["correo"] = $response[0]["correo"];
+    $_SESSION["id_usuario"] = $response[0]["id"];
+} else {
+    echo json_encode(array());
 }
 
 echo json_encode($response);
